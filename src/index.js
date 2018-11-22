@@ -6,6 +6,8 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import "./style/index.css";
 import Main from "./components/Main";
+import { Provider } from "react-redux";
+import store, { history } from "./store";
 
 const App = () => (
   <BrowserRouter>
