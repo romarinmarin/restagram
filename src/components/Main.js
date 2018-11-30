@@ -9,10 +9,15 @@ class Main extends Component {
       <div>
         <h1>
           <Link to="/">Reinstagram</Link>
+          <Link to="/view/fefz">View</Link>
         </h1>
+
         <Switch>
-          <Route exact path="/" component={PhotoGrid} />
-          <Route path={`/view/:postId`} component={Single} />
+          <Route exact path="/" render={() => <PhotoGrid {...this.props} />} />
+          <Route
+            path={`/view/:postId`}
+            render={() => <Single {...this.props} />}
+          />
           <Route path="/error" render={() => <div>Error page</div>} />
           <Redirect to="/" />
         </Switch>

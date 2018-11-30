@@ -5,15 +5,16 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import "./style/index.css";
-import Main from "./components/Main";
+// import App from "./components/App";
 import { Provider } from "react-redux";
 import store, { history } from "./store";
+import App from "./components/App";
 
-const App = () => (
-  <BrowserRouter>
-    <div className="sans-serif">
-      <Route path="/" component={Main} />
-    </div>
-  </BrowserRouter>
+ReactDOM.render(
+  <Provider store={store}>
+    <BrowserRouter>
+      <Route path="/" component={App} />
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById("root")
 );
-ReactDOM.render(<App />, document.getElementById("root"));
