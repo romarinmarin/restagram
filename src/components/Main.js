@@ -16,7 +16,7 @@ class Main extends Component {
           <Route exact path="/" render={() => <PhotoGrid {...this.props} />} />
           <Route
             path={`/view/:postId`}
-            render={() => <Single {...this.props} />}
+            render={({ match }) => <Single {...this.props} match={match} />}
           />
           <Route path="/error" render={() => <div>Error page</div>} />
           <Redirect to="/" />

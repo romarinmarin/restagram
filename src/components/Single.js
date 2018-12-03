@@ -1,11 +1,13 @@
 import React from "react";
 
 const Single = props => {
-  const { caption } = props.post;
+  const { postId } = props.match.params;
+  const postIndex = props.posts.findIndex(post => post.id == postId);
+  const post = props.posts[postIndex];
 
   return (
     <div className="single-photo">
-      <h2>{caption}</h2>
+      <h2>{post.caption}</h2>
     </div>
   );
 };
