@@ -9,6 +9,7 @@ import "./style/index.css";
 import { Provider } from "react-redux";
 import store, { history } from "./store";
 import App from "./components/App";
+import './css/style.css';
 
 ReactDOM.render(
   <Provider store={store}>
