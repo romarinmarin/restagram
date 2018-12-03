@@ -1,5 +1,4 @@
 import React from "react";
-import Single from "./Single";
 import Photo from "./Photo";
 
 const PhotoGrid = props => {

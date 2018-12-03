@@ -1,21 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Single from "./Single";
 import comments from "../data/comments";
 
 const Photo = props => {
   const { id, code, caption, display_src, likes } = props.post;
   const i = props.i;
 
-  let thumbStyle = {
-    backgroundImage: `url(${display_src})`,
-    height: "400px",
-    width: "400px"
-  };
   return (
     <figure className="grid-figure">
       <div className="grid-photo-wrap">
-        <Link to={`/view/${code}`}>
+        <Link to={`/view/${id}`}>
           <img src={display_src} alt={caption} className="grid-photo" />
         </Link>
         <span key={likes} className="likes-heart">
@@ -30,7 +24,7 @@ const Photo = props => {
             {" "}
             {likes}
           </button>
-          <Link className="button" to={`/view/${code}`}>
+          <Link className="button" to={`/view/${id}`}>
             <span className="comment-count">
               <span className="speech-bubble" />
               {comments[code] ? comments[code].length : 0}

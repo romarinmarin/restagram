@@ -1,6 +1,5 @@
 function posts(state = [], action) {
   const i = action.index;
-  console.log(state);
   switch (action.type) {
     case "INCREMENT_LIKES":
       const currentPost = { ...state[i], likes: state[i].likes + 1 };
