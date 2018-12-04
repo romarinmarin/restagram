@@ -9,7 +9,7 @@ const Photo = props => {
   return (
     <figure className="grid-figure">
       <div className="grid-photo-wrap">
-        <Link to={`/view/${id}`}>
+        <Link to={`/view/${code}`}>
           <img src={display_src} alt={caption} className="grid-photo" />
         </Link>
         <span key={likes} className="likes-heart">
@@ -24,7 +24,7 @@ const Photo = props => {
             {" "}
             {likes}
           </button>
-          <Link className="button" to={`/view/${id}`}>
+          <Link className="button" to={`/view/${code}`}>
             <span className="comment-count">
               <span className="speech-bubble" />
               {comments[code] ? comments[code].length : 0}
