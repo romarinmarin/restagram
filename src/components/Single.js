@@ -12,7 +12,7 @@ const Single = props => {
   return (
     <div className="single-photo">
       <Photo {...props} post={post} i={postIndex} />
-      <Comments comments={comments} />
+      <Comments {...props} postId={post.code} comments={comments} />
     </div>
   );
 };

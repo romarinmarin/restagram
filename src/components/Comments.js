@@ -17,7 +17,7 @@ class Comments extends Component {
     e.preventDefault();
     const message = this.refs.message.value;
     const author = this.refs.author.value;
-    console.log(message, author);
+    this.props.addComment(this.props.postId, message, author);
   };
   render() {
     return (
