@@ -1,4 +1,4 @@
-Restagram : A instagram clone with React & Redux
+Restagram : An instagram clone with React & Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
