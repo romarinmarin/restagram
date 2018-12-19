@@ -7,10 +7,21 @@ class Comments extends Component {
         <p>
           <strong>{c.user}</strong>
           {c.text}
-          <button className="remove-comment">&times;</button>
+          <button
+            onClick={() => {
+              this.handleDelete(this.props.postId, i);
+            }}
+            className="remove-comment"
+          >
+            &times;
+          </button>
         </p>
       </div>
     );
+  };
+
+  handleDelete = (postId, message, author) => {
+    this.props.deleteComment(postId, message, author);
   };
 
   handleSubmit = e => {

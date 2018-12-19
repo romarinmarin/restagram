@@ -14,11 +14,10 @@ export const addComment = (postId, message, author) => {
   };
 };
 
-export function deleteComment(postId, message, author) {
+export function deleteComment(postId, i) {
   return {
     type: "DELETE_COMMENT",
     postId,
-    message,
-    author
+    i
   };
 }
